@@ -18,7 +18,7 @@ export default class SmallNote extends Component {
     return (
       <div className='small-note'>
         <div className='small-note-header'>{this.renderTimestamp(data.timestamp)}</div>
-        <div className='small-note-contents'>{data.content}</div>
+        <div className='small-note-content'>{data.content}</div>
       </div>
     );
   }
