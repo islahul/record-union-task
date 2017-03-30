@@ -11,4 +11,5 @@
 * Install node modules using ```yarn```
 * Start development mode by ```yarn start```
 * Run tests using ```yarn test```
-* Build project using ```yarn build```
+* Build project using ```PUBLIC_URL='.' yarn build```
+* Cheers!
