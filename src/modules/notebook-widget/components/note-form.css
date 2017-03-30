@@ -1,6 +1,7 @@
 .note-form {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .note-form-input {
@@ -66,4 +67,14 @@
 
 .note-form-submit:hover:before {
   transform: scale(2);
+}
+
+.note-form-error-message {
+  position: absolute;
+  top: -60%;
+  left: -10px;
+  background: #333;
+  border-radius: 15px;
+  padding: 3px 10px;
+  color: #ffce00;
 }
