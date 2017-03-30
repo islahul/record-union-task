@@ -16,6 +16,9 @@ export default class NoteForm extends Component {
       this.setState({
         errorMessage: 'Can\'t add an empty note'
       });
+      setTimeout(() => (this.setState({
+        errorMessage: null
+      })), 1500);
       return;
     }
 
@@ -37,11 +40,20 @@ export default class NoteForm extends Component {
     this.submitForm();
   };
 
+  renderErrorMessage = (errorMessage) => {
+    return (
+      <div className='note-form-error-message'>
+        {errorMessage}
+      </div>
+    );
+  }
+
   render() {
-    const {inputValue} = this.state;
+    const {inputValue, errorMessage} = this.state;
 
     return (
       <form onSubmit={this.handleFormSubmit} className='note-form'>
+        {errorMessage && this.renderErrorMessage(errorMessage)}
         <input
           className='note-form-input'
           placeholder='Enter note here'
