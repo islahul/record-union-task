@@ -1,0 +1,20 @@
+.page-header {
+  padding: 15px;
+  background: #F5F5FC;
+}
+
+.page-header-logo {
+  width: 150px;
+}
+
+.page-content {
+  padding: 15px 82px;
+}
+
+h1.page-title {
+  color: #F55;
+  font-size: 2.8em;
+  letter-spacing: 0.02em;
+  margin: 15px auto;
+  font-weight: bold;
+}
