@@ -19,7 +19,7 @@ describe('Notebook actions test', () => {
     const { storeInstance } = setup();
     storeInstance.dispatch(addNote({
       timestamp: +new Date(),
-      content: 'Hello, this is a new note'
+      content: 'Hello there'
     }));
 
     // Two timers should start
@@ -31,6 +31,7 @@ describe('Notebook actions test', () => {
     jest.runTimersToTime(1050);
     currentState = storeInstance.getState();
     expect(currentState.notebook.notes.length).toBe(1);
+    expect(currentState.notebook.notes[0].content).toBe('Hello there');
     expect(currentState.notebook.notes[0].page_visible).toBe(false);
 
     // Let second timer end -> page_visible becomes true

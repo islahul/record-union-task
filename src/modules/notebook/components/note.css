@@ -7,3 +7,13 @@
 .note-content {
   font-size: 1em;
 }
+
+.note-header-delete {
+  cursor: pointer;
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.note-header-delete:hover, .note-header-delete:active {
+  color: red;
+}
