@@ -4,7 +4,7 @@ import Notebook from './index';
 import Store from '../../store';
 import { Provider } from 'react-redux';
 import Note from './components/note';
-import ReactTestUtils from 'react-addons-test-utils'
+import ReactTestUtils from 'react-addons-test-utils';
 
 function setup(initialState) {
   const storeInstance = Store(initialState);
@@ -80,6 +80,4 @@ describe('Notebook widget test', () => {
     );
     expect(visibleNotes.length).toBe(2);
   });
-
-
 });

@@ -23,7 +23,7 @@ export default class Note extends Component {
     return (
       <div className='note'>
         <div className='note-header'>{this.renderTimestamp(data.timestamp)}</div>
-        <div className='note-contents'>{data.content}</div>
+        <div className='note-content'>{data.content}</div>
       </div>
     );
   }
