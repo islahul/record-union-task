@@ -13,6 +13,11 @@ export default class Note extends Component {
     return format(date, 'MMMM D, YYYY h:mma');
   }
 
+  handleDeleteNote = (e) => {
+    e.preventDefault();
+    this.props.onDelete(this.props.data);
+  }
+
   render() {
     const { data } = this.props;
 
@@ -22,7 +27,11 @@ export default class Note extends Component {
 
     return (
       <div className='note'>
-        <div className='note-header'>{this.renderTimestamp(data.timestamp)}</div>
+        <div className='note-header'>{this.renderTimestamp(data.timestamp)} ·
+          {' '}
+          <a className='note-header-delete'
+            onClick={this.handleDeleteNote}>delete</a>
+        </div>
         <div className='note-content'>{data.content}</div>
       </div>
     );

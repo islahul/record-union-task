@@ -2,7 +2,13 @@ export default (initialState = {notes: []}, payload) => {
   let nextState;
   switch (payload.type) {
     case 'NOTEBOOK_DELETE_NOTE':
-      return initialState;
+      nextState = Object.assign({}, initialState);
+      const sliceIndex = nextState.notes.findIndex((note) => (
+        note.timestamp === payload.note.timestamp
+      ));
+      nextState.notes = [...nextState.notes];
+      nextState.notes.splice(sliceIndex, 1);
+      return nextState;
 
     case 'NOTEBOOK_ADD_NOTE':
       nextState = Object.assign({}, initialState);

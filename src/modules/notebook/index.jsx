@@ -11,7 +11,7 @@ class Notebook extends Component {
     deleteNote: PropTypes.func
   };
 
-  handleDeleteNote = (note) => (e) => {
+  handleDeleteNote = (note) => {
     this.props.deleteNote(note);
   }
 
@@ -23,7 +23,7 @@ class Notebook extends Component {
           <Note
             key={index}
             data={note}
-            onDelete={this.handleDeleteNote(note)}
+            onDelete={this.handleDeleteNote}
           />
         ))}
       </section>
