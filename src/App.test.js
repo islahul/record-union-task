@@ -12,12 +12,14 @@ function setup() {
   };
 }
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  const {storeInstance} = setup();
-  ReactDOM.render((
-    <Provider store={storeInstance}>
-      <App />
-    </Provider>
-  ), div);
+describe('Root test', () => {
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    const {storeInstance} = setup();
+    ReactDOM.render((
+      <Provider store={storeInstance}>
+        <App />
+      </Provider>
+    ), div);
+  });
 });
