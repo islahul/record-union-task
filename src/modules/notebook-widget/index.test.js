@@ -14,8 +14,6 @@ function setup(initialState) {
   };
 }
 
-jest.useFakeTimers();
-
 describe('Notebook widget test', () => {
   it('renders independently without crashing', () => {
     const div = document.createElement('div');
