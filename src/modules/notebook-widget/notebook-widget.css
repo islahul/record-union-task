@@ -29,9 +29,9 @@
   width: 100%;
 }
 
-.notebook-widget-icon.minimize {
+.notebook-widget-icon.maximized {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAIVBMVEUAAAD///////////////////////////////////8AAADPn83rAAAACXRSTlMACq47u/I8r7wWzHxoAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAJJJREFUGNNdzzEKhDAQBdAvwtYWW9hbbSdCDrBnWBDS2Sx7A8HSKwgic1tNxj/jmirDC5P/UTSw01V4ri2nMr7xkg/HIAu+Qi6j9HhEcpB1gHFGGCuSTyQTlQ2Vg3ic4x49TVpzwcQXvI+3x/+r0p9eLAfyYhrIWNOSmfZkVlH2Kpm9Z+bJeh68oSYmnlGMnv1X7RZ2SET5id+LAAAAAElFTkSuQmCC);
-  background-size: 30px 30px;
+  background-size: 25px 25px;
   background-position: 50% 50%;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .notebook-widget-list-container {
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   background: #fafafe;
   padding: 15px;
   overflow-y: scroll;

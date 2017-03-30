@@ -9,6 +9,7 @@
 
 .page-content {
   padding: 15px 82px;
+  max-width: 1440px;
 }
 
 h1.page-title {

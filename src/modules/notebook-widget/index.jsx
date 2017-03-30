@@ -14,7 +14,7 @@ class NotebookWidget extends Component {
   };
 
   state = {
-    minimized: true
+    maximized: false
   }
 
   handleAddNote = (noteContent) => {
@@ -26,21 +26,24 @@ class NotebookWidget extends Component {
 
   handleWidgetIconClick = (e) => {
     this.setState({
-      minimized: !this.state.minimized
+      maximized: !this.state.maximized
     });
   }
 
   renderIcon = () => ((
-    <div className='notebook-widget-icon-container' onClick={this.handleWidgetIconClick}>
-      <div className='notebook-widget-icon' />
+    <div
+      className='notebook-widget-icon-container'
+      onClick={this.handleWidgetIconClick}
+    >
+      <div className={`notebook-widget-icon ${this.state.maximized ? 'maximized' : ''}`} />
     </div>
   ));
 
   render() {
     const { notebook, className } = this.props;
-    const { minimized } = this.state;
+    const { maximized } = this.state;
 
-    if (minimized) {
+    if (!maximized) {
       return (
         <div className={`${className || ''} notebook-widget`}>
           {this.renderIcon()}

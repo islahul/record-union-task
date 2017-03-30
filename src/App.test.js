@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Store from './store';
+import { Provider } from 'react-redux';
+
+function setup() {
+  const storeInstance = Store();
+
+  return {
+    storeInstance
+  };
+}
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  const {storeInstance} = setup();
+  ReactDOM.render((
+    <Provider store={storeInstance}>
+      <App />
+    </Provider>
+  ), div);
 });
